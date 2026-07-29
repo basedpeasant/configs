@@ -1,6 +1,7 @@
-{ config, pkgs, kimi-cli, nix-vscode-extensions, ethereum, plasma-manager, neovim-nightly, ... }:
+{ config, pkgs, kimi-cli, nix-vscode-extensions, ethereum, plasma-manager, neovim-nightly, opencode, ... }:
 
 {
+
   home.username = "yash";
   home.homeDirectory = "/home/yash";
 
@@ -40,6 +41,7 @@
     vscode
     discord
     gimp
+    krita
     brave
     # telegram-desktop # this isn't working
 
@@ -55,6 +57,8 @@
 
     #random
     inkscape
+    calibre
+    wlsunset
     
     # archives
     zip
@@ -89,6 +93,9 @@
     zellij
     lazygit
     kimi-cli.packages.${pkgs.system}.default
+    # opencode.packages.${pkgs.system}.default
+    sqlitebrowser
+
     jq
     devenv
     pnpm
@@ -96,15 +103,16 @@
     deno
     bun
     niri
-    bitwarden-desktop
+    # bitwarden-desktop # upstream issue with insecure electron version can enable again once fixed
     libreoffice
     valgrind
     gnumake
+    mpv
 
     #dev
     pkg-config
-    docker
-    docker-compose
+    #docker
+    #docker-compose
 
     # safety
     age
@@ -117,7 +125,7 @@
     zls
     rustup
     typescript-language-server
-    dmd
+    # dmd # getting error with nullptr lol
     uv
     python3
     ruff
@@ -127,6 +135,15 @@
     gdb
     cmake
     c3c
+
+    # # for dms
+    dgop
+    cava
+    khal
+    wtype
+    quickshell
+    matugen
+    dms-shell
 
     ethereum.packages.${pkgs.system}.solidity-language-server
     ethereum.packages.${pkgs.system}.foundry
@@ -204,11 +221,11 @@
   };
 
   programs.vscode = {
-    enable = true;
+    enable = false;
     mutableExtensionsDir = false;
     profiles.default.enableExtensionUpdateCheck = false;
     profiles.default.enableUpdateCheck = false;
-    package = pkgs.vscode;
+    package = pkgs.vscodium;
 
     # https://raw.githubusercontent.com/nix-community/nix-vscode-extensions/refs/heads/master/data/cache/vscode-marketplace-latest.json
     profiles.defualt.extensions = with nix-vscode-extensions.extensions.${pkgs.system}.vscode-marketplace; 
@@ -225,6 +242,8 @@
       "editor.fontFamily" = "'FiraCode Nerd Font', 'FiraCode Nerd Font Mono', 'monospace', monospace";
     };
   };
+
+  
 
   programs.helix = {
     enable = true;

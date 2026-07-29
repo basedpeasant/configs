@@ -42,7 +42,7 @@
   networking.networkmanager.enable = true;
 
   # enabling docker service
-  virtualisation.docker.enable = true;
+  virtualisation.docker.enable = false;
 
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;

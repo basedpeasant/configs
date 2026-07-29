@@ -13,7 +13,9 @@ vim.pack.add {
     'https://github.com/rose-pine/neovim',
     'https://github.com/luiscassih/AniMotion.nvim',
     'https://github.com/jake-stewart/multicursor.nvim',
-    'https://github.com/lewis6991/gitsigns.nvim'
+    'https://github.com/lewis6991/gitsigns.nvim',
+    'https://github.com/miikanissi/modus-themes.nvim',
+    'https://github.com/savq/melange-nvim'
 }
 
 require('oil').setup(oilconfig)
@@ -77,7 +79,6 @@ wk.add({
   { "<leader>b", "<cmd>Telescope buffers<cr>", desc = "Buffers", mode = "n" },
   -- { "<leader>fn", "<cmd>tabnew<cr>", desc = "New File" },
   { "<leader>k", "<cmd>Compile<cr>", desc = "compile-mode" },
-  { "<leader>g", "<cmd>Telescope git_status<cr>", desc = "Show Git status" },
   { "<leader>f1", hidden = true }, -- hide this keymap
   { "<leader>w", proxy = "<c-w>", group = "windows" }, -- proxy to window mappings
   --{ "<leader>b", group = "buffers", expand = function()
