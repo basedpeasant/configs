@@ -59,6 +59,7 @@
     inkscape
     calibre
     wlsunset
+    qdirstat
     
     # archives
     zip
@@ -93,7 +94,7 @@
     zellij
     lazygit
     kimi-cli.packages.${pkgs.system}.default
-    # opencode.packages.${pkgs.system}.default
+    opencode.packages.${pkgs.system}.default
     sqlitebrowser
 
     jq

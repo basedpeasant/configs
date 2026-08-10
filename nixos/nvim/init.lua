@@ -6,7 +6,8 @@ vim.opt.termguicolors = true
 -- vim.cmd('colorscheme minicyan')
 -- vim.cmd('colorscheme lunaperche')
 -- vim.cmd('colorscheme modus')
-vim.cmd('colorscheme redsayer')
+--vim.cmd('colorscheme redsayer')
+vim.cmd('colorscheme rose-pine-moon')
 
 vim.cmd('set nowrap')
 

@@ -319,6 +319,8 @@ environment {
     SDL_IM_MODULE "fcitx"
     GLFW_IM_MODULE "fcitx"
     INPUT_MODULE "fcitx"
+    XDG_CURRENT_DESKTOP "niri"
+    QT_QPA_PLATFORMTHEME "kde"
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
